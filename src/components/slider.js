@@ -1,8 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { HiOutlineUser } from 'react-icons/hi';
 import userIcon from '../images/userIcon.png'
+import { Link } from 'react-router-dom';
+import calenderImg from '../images/calender.png'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,7 +15,13 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-export default function Slider({ img }) {
+export default function Slider(props) {
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        setData(props?.data)
+    }, [props.data])
+
     return (
         <>
             <Swiper
@@ -25,132 +33,33 @@ export default function Slider({ img }) {
                 // modules={[Pagination]}
                 className="mySwiper relative !w-[1000px] flex justify-start mt-4"
             >
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"}  className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"}  className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"}  className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"}  className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"}  className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className='!bg-transparent'>
-                    <div className='flex flex-col gap-y-1'>
-                        <div>
-                            <img src={img || "https://wallpapercave.com/dwp1x/wp12528831.jpg"} className='!w-[332px] !h-[190px] rounded-lg' alt="" />
-                        </div>
-                        <div className='flex flex-col gap-y-[2px]'>
-                            <div className="flex items-center gap-x-2">
-                                <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
-                                <span className='text-sm font-semibold'>Sweet love 1</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                            <div className='flex items-center text-sm ml-6'>
-                                <HiOutlineUser />
-                                <span className='text-xs'>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                {
+                    data?.map((val, index) => {
+                        return (
+                            <SwiperSlide className='!bg-transparent' key={index}>
+                                <a href={val?.link} className='flex flex-col gap-y-1'>
+                                    <div>
+                                        <img src={val?.img} className={` ${props.clips ? "!w-[300px] !h-[450px]" : "!w-[300px] !h-[190px]"} !w-[332px] !h-[190px] rounded-lg`} alt="" />
+                                    </div>
+                                    <div className='flex flex-col gap-y-[2px]'>
+                                        <div className="flex items-center gap-x-2">
+                                            <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
+                                            <span className='text-sm font-semibold'>{val?.title}</span>
+                                        </div>
+                                        <div className='flex items-center text-sm ml-6'>
+                                            <HiOutlineUser />
+                                            <span className='text-xs'>{val?.userName}</span>
+                                        </div>
+                                        <div className='flex items-center text-sm ml-6 gap-x-1'>
+                                            <img src={calenderImg} className='h-3 w-3'/>
+                                            <span className='text-xs'>{val?.timeAgo}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </SwiperSlide>
+                        )
+                    })
+                }
             </Swiper>
         </>
     );

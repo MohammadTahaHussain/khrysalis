@@ -4,7 +4,7 @@ import { MdOutlineSlowMotionVideo } from 'react-icons/md'
 import { BiSolidLike } from 'react-icons/bi'
 
 import home from "../images/home.png"
-import clip from "../images/Blips.png"
+import blip from "../images/Blips.png"
 import video from "../images/videos.png"
 import like from "../images/like.png"
 import members from "../images/members.png"
@@ -21,8 +21,8 @@ const options = [
         title: 'home',
         icon: home
     }, {
-        title: 'clips',
-        icon: clip
+        title: 'Blips',
+        icon: blip
     }, {
         title: 'videos',
         icon: video

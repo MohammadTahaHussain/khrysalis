@@ -1,95 +1,355 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { BsFacebook, BsFillPlayFill } from 'react-icons/bs'
+import { PiSpeakerLowBold } from 'react-icons/pi'
+import { BsFillPlayFill } from 'react-icons/bs'
 import { AiOutlineSetting } from 'react-icons/ai'
-import { PiSpeakerSimpleLowBold } from 'react-icons/pi'
-import { BiFullscreen } from 'react-icons/bi'
+import { BiFullscreen } from 'react-icons/bi';
+
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-// import "../App.css"
 
+import './liveSlider.css';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-export default function LiveSlider(props) {
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        setData([1,2,3,4,5,6])
-    }, [props.data])
-
+export default function App() {
     return (
         <>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={30}
-                // pagination={{
-                //     clickable: true,
-                // }}
-                // modules={[Pagination]}
-                className="mySwiper relative !w-[1000px] flex justify-start mt-4"
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                }}
+                pagination={false}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
             >
-                {
-                    data?.map((val, index) => {
-                        return (
-                            <SwiperSlide className='!bg-transparent' key={index}>
-                                <a href={val?.link} className='flex flex-col gap-y-1'>
-                                    <div className='flex w-[480px]'>
-                                        <div className='w-[70%] relative h-[232px]'>
-                                            <img src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFuaW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="" className='h-full w-full'/>
-                                            <span className='absolute text-white rounded px-1 text-sm top-2 left-1 bg-red-600'>
-                                                LIVE
-                                            </span>
-                                            <div className="flex items-center justify-between absolute bottom-0 w-full p-1">
-                                                <div className='flex items-center gap-x-1'>
-                                                    <BsFillPlayFill className='text-white text-[20px]' />
-                                                    <PiSpeakerSimpleLowBold className='text-[16px] text-white' />
-                                                </div>
-                                                <div className='flex items-center gap-x-2'>
-                                                    <span className='bg-gray-200 text-black rounded-full flex items-center justify-center px-2 text-xs'>
-                                                        360
-                                                    </span>
-                                                    <AiOutlineSetting className='text-white' />
-                                                    <BiFullscreen className='text-white' />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className='bg-white w-[30%] p-2 h-[232px]'>
-                                            <div className="flex gap-x-1">
-                                                <img src="https://images.unsplash.com/photo-1611784728764-bd07975a4b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" className='h-8 w-8 rounded-full' alt="" />
-                                                <div className='flex flex-col'>
-                                                    <span className="font-semibold text-blue-600">
-                                                        Laser Belch
-                                                    </span>
-                                                    <span>
-                                                        Neon White
-                                                    </span>
-                                                    <span>
-                                                        556 viewers
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-wrap justify-start gap-2">
-                                                <span className='capitalize text-sm bg-gray-400 px-2  rounded-lg'>
-                                                    English
-                                                </span>
-                                                <span className='capitalize text-sm bg-gray-400 px-2  rounded-lg'>
-                                                    English
-                                                </span>
-                                            </div>
-                                            <div>
-                                                Check out this stream from Laser Belch
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </SwiperSlide>
-                        )
-                    })
-                }
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="flex bg-white w-[420px] h-[220px]">
+                        <div className='relative w-[65%]'>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                                LIVE
+                            </span>
+                            <div className="flex absolute w-full bottom-2 justify-between px-2">
+                                <div className='flex gap-x-1 items-center'>
+                                    <PiSpeakerLowBold className='text-white' />
+                                    <BsFillPlayFill className='text-white' />
+                                </div>
+                                <div className='flex gap-x-1'>
+                                    <span className="bg-gray-500 text-xs rounded-full px-2">
+                                        360p
+                                    </span>
+                                    <AiOutlineSetting className='text-white' />
+                                    <BiFullscreen className='text-white' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-[35%] px-1 py-[2px]'>
+                            <span className="block text-blue-500">
+                                Laser belch
+                            </span>
+                            <span className="block text-blue-500 font-thin">
+                                Neon White
+                            </span>
+                            <span className="block">
+                                556 viewers
+                            </span>
+                            <div className='flex gap-x-2 gap-y-1 flex-wrap'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    English
+                                </span>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                    FirstPlayThrough
+                                </span>
+                            </div>
+                            <p className='text-sm'>
+                                Check out this stream from Laser Belch
+                            </p>
+                        </div>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </>
     );

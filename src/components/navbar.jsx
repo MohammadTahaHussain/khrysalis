@@ -5,10 +5,10 @@ import { MdOutlineDarkMode } from "react-icons/md"
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center p-1 max-w-[1268px] m-auto bg-transparent w-full">
+        <div className="flex justify-between items-center p-1 m-auto bg-transparent w-full">
             <div className="text-white"><img src={Logo} alt="" className="w-36 h-8"/></div>
             <div className="bg-transparent">
-                <div className="border border-gray-400 flex rounded-full bg-transparent z-10">
+                <div className="border border-gray-400 flex rounded-full bg-transparent z-50">
                     <select name="" id="" className="text-sm text-opacity-80 uppercase px-1 text-teal-400 bg-transparent border-r border-gray-400 focus-visible:outline-none">
                         <option value="" selected>All</option>
                     </select>

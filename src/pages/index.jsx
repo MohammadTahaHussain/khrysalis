@@ -1,53 +1,44 @@
 import '../App.css'
 import Navbar from '../components/navbar'
-import dashboardLinks from "../jsons/dashboard-options"
 import { Link } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
+import { useState } from 'react'
 import BlitsLogo from '../images/BLITS_LOGO-01.png'
 import { useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
 import Slider from '../components/slider'
-import { recommendedLinks, gamingLinks, musicLinks, sportsLinks, clipLinks } from '../jsons/videoLinks'
+import { recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks } from '../jsons/videoLinks'
 import { AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
 import { FaPinterest } from 'react-icons/fa'
-import { BsFacebook} from 'react-icons/bs'
+import { BsFacebook } from 'react-icons/bs'
 import LiveSlider from '../components/livesSlider'
 import logoIcon from '../images/logoIcon.png'
 import logoText from "../images/logoText.png"
+import Dashboard from '../components/dashboard'
+import bannerImg from '../images/Image 1.png'
 
 function HomePage() {
     return (
         <>
-            <div className="bg-[#474747] border-b border-gray-500 fixed w-full z-10">
+            <div className="bg-[#474747] border-b border-gray-500 fixed w-full z-50">
                 <Navbar />
             </div>
             <div className="bg-black relative top-10">
-                <div className="max-w-[1268px] m-auto">
-                    <div className="flex">
-                        <div className='w-[250px] h-fit z-10'>
-                            <div className='p-2 fixed w-[200px] bg-[#474747] top-10'>
-                                <div>
-                                    <FaBars className='ml-9 text-white' />
+                <div className="m-auto">
+                    <div className="flex justify-between w-full">
+                        <div className='w-[15%] h-fit z-10'>
+                            <div className='fixed w-[200px] bg-[#474747] top-10'>
+                                <div className='w-full flex justify-center items-center py-2'>
+                                    <FaBars className='text-white' />
                                 </div>
-                                {
-                                    dashboardLinks?.map((val, index) => {
-                                        return (
-                                            <Link className='flex gap-x-4 mt-3 items-center text-white'>
-                                                <img className='w-5 h-5' src={val?.icon} alt="" />
-                                                {
-                                                    val?.title
-                                                }
-                                            </Link>
-                                        )
-                                    })
-                                }
+                                <Dashboard active={"home"} />
                             </div>
                         </div>
-                        <div className='w-full'>
+                        <div className='w-[85%] '>
                             <div className='flex justify-center items-center py-2'>
                                 <img src={BlitsLogo} className='h-[35px]' alt="" />
                             </div>
-                            <div className='mb-3 category-links-slider w-[1024px] m-auto'>
+                            <div className={`mb-3 category-links-slider w-[98%] m-auto`}>
                                 <div className='flex overflow-x-scroll gap-x-2 py-2'>
                                     <span className="rounded-lg text-sm bg-gray-400 px-1">
                                         Travel
@@ -130,7 +121,6 @@ function HomePage() {
                                 <div className="flex max-h-[333px]">
                                     <div className='w-[55%] relative'>
                                         <img src="https://images6.alphacoders.com/132/thumbbig-1326038.webp" className='h-full w-full' alt="" />
-                                        {/* <img src="https://c4.wallpaperflare.com/wallpaper/861/16/991/oblivion-epic-games-fortnite-hd-wallpaper-thumb.jpg" className='h-full w-full' alt="" /> */}
                                         <span className='absolute text-white right-2 top-2 bg-gray-600 px-2 rounded-xl text-sm'>
                                             00:07
                                         </span>
@@ -199,9 +189,11 @@ function HomePage() {
                                         Live
                                     </h1>
                                     <hr className='z-0 border-gray-600' />
-                                    <LiveSlider/>   
+                                    <div className='live-slider'>
+                                        <LiveSlider />
+                                    </div>
                                 </div>
-                                <div className='text-white mt-2'>
+                                <div className='text-white mt-5'>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Recommendations
                                     </h1>
@@ -216,7 +208,7 @@ function HomePage() {
 
 
 
-                                <div className='text-white mt-2 '>
+                                <div className='text-white mt-5 '>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Gaming
                                     </h1>
@@ -228,7 +220,11 @@ function HomePage() {
 
                                 </div>
 
-                                <div className='text-white mt-2'>
+                                <div className='w-full h-[324px] mt-5'>
+                                    <img src={bannerImg} alt="" className='h-full w-full rounded-lg' />
+                                </div>
+
+                                <div className='text-white mt-5'>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Music
                                     </h1>
@@ -240,7 +236,7 @@ function HomePage() {
 
                                 </div>
 
-                                <div className='text-white mt-2'>
+                                <div className='text-white mt-5'>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Sports
                                     </h1>
@@ -252,18 +248,22 @@ function HomePage() {
 
                                 </div>
 
-                                <div className='text-white mt-2'>
+                                <div className='text-white mt-5'>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
-                                        Clips
+                                        Blips
                                     </h1>
                                     <hr className='z-0 border-gray-600' />
 
                                     <div>
-                                        <Slider data={clipLinks} clips={true} />
+                                        <Slider data={blipLinks} blips={true} />
                                     </div>
                                 </div>
 
-                                <div className='text-white mt-2 '>
+                                <div className='w-full h-[324px] mt-5'>
+                                    <img src={bannerImg} alt="" className='h-full w-full rounded-lg' />
+                                </div>
+
+                                <div className='text-white mt-5 '>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Gaming
                                     </h1>
@@ -275,8 +275,8 @@ function HomePage() {
 
                                 </div>
 
-                                <div className='text-white mt-2'>
-                                    <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-50">
+                                <div className='text-white mt-5'>
+                                    <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
                                         Music
                                     </h1>
                                     <hr className='z-0 border-gray-600' />
@@ -292,7 +292,7 @@ function HomePage() {
             </div>
             {/* Footer  */}
             <div className='bg-[#474747] z-50 relative top-10'>
-                <footer class="text-white body-font max-w-[1268px] m-auto">
+                <footer class="text-white body-font m-auto">
                     <div class="container px-5 py-10 mx-auto">
                         <div class="flex flex-wrap md:text-left text-center order-first">
                             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -304,8 +304,8 @@ function HomePage() {
                                 <div>
                                     <img src={logoIcon} className='block m-auto w-10 h-10' alt="" />
                                     <img src={logoText} className='block mt-1' alt="" />
-                                    <p className='text-xs mt-2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, delectus ad similique suscipit aliquid inventoret rem eos?</p>
-                                </div>                                    
+                                    <p className='text-xs mt-[8px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, delectus ad similique suscipit aliquid inventoret rem eos?</p>
+                                </div>
                             </div>
                             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                                 <div className='mb-3'>
@@ -354,39 +354,26 @@ function HomePage() {
                             </div>
                             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
                                 <div className='mb-3'>
-                                    <h2 class="title-font font-medium text-white tracking-widest text-sm uppercase">About US</h2>
+                                    <h2 class="title-font font-medium text-white tracking-widest text-sm uppercase">Signup for news letter</h2>
                                     <hr className='border-blue-600 border-b-2 relative top-[1px] w-10 z-50' />
                                     <hr className='border-gray-600 z-0' />
-                                </div>                                               <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-                                    <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-                                        <label for="footer-field" class="leading-7 text-sm text-white">Placeholder</label>
-                                        <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                                    </div>
-                                    <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
                                 </div>
-                                <p class="text-white text-sm mt-2 md:text-left text-center">Bitters chicharrones fanny pack
-                                    <br class="lg:block hidden" />waistcoat green juice
-                                </p>
+                                <div class="flex flex-col gap-y-2">
+                                    <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                                        <input type="text" placeholder='Enter your Email' id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                    </div>
+                                    <button class="lg:mt-2 w-fit xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="">
-                        <div class="container px-5 py-6 mx-auto flex items-center justify-between sm:flex-row flex-col">
-                            <div className="bg-blue-600 w-[200px] h-[100px] flex justify-center items-center">
-                                This is an ad
-                            </div>
-                            <div className="flex flex-col items-center gap-x-2">
-                                <h1 className='uppercase'>Connect with us</h1>
-                                <div className="flex gap-x-2 items-center">
-                                    <a href=""><AiFillYoutube className='text-red-500 text-[26px]' /></a>
-                                    <a href=""><FaPinterest className='text-red-600 text-[26px]' /></a>
-                                    <a href=""><AiFillLinkedin className='text-blue-600 text-[26px]' /></a>
-                                    <a href=""><BsFacebook className='text-blue-500 text-[24px]' /></a>
-                                </div>
-                            </div>
-                            <div className="bg-blue-600 w-[200px] h-[100px] flex justify-center items-center">
-                                This is an ad
-                            </div>
+                    <div className="flex flex-col items-center gap-x-2 w-fit m-auto">
+                        <h1 className='uppercase'>Connect with us</h1>
+                        <div className="flex gap-x-2 items-center">
+                            <a href=""><AiFillYoutube className='text-red-500 text-[26px]' /></a>
+                            <a href=""><FaPinterest className='text-red-600 text-[26px]' /></a>
+                            <a href=""><AiFillLinkedin className='text-blue-600 text-[26px]' /></a>
+                            <a href=""><BsFacebook className='text-blue-500 text-[24px]' /></a>
                         </div>
                     </div>
                 </footer>

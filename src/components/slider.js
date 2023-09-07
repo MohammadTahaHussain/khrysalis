@@ -31,7 +31,7 @@ export default function Slider(props) {
                 //     clickable: true,
                 // }}
                 // modules={[Pagination]}
-                className="mySwiper relative !w-[1000px] flex justify-start mt-4"
+                className="mySwiper relative !w-full flex justify-start mt-4"
             >
                 {
                     data?.map((val, index) => {
@@ -39,7 +39,7 @@ export default function Slider(props) {
                             <SwiperSlide className='!bg-transparent' key={index}>
                                 <a href={val?.link} className='flex flex-col gap-y-1'>
                                     <div>
-                                        <img src={val?.img} className={` ${props.clips ? "!w-[300px] !h-[450px]" : "!w-[300px] !h-[190px]"} !w-[332px] !h-[190px] rounded-lg`} alt="" />
+                                        <img src={val?.img} className={` ${props.blips ? "!w-[300px] !h-[450px]" : "!w-[300px] !h-[190px]"} !w-[332px] !h-[190px] rounded-lg`} alt="" />
                                     </div>
                                     <div className='flex flex-col gap-y-[2px]'>
                                         <div className="flex items-center gap-x-2">
@@ -51,7 +51,7 @@ export default function Slider(props) {
                                             <span className='text-xs'>{val?.userName}</span>
                                         </div>
                                         <div className='flex items-center text-sm ml-6 gap-x-1'>
-                                            <img src={calenderImg} className='h-3 w-3'/>
+                                            <img src={calenderImg} className='!h-3 !w-3'/>
                                             <span className='text-xs'>{val?.timeAgo}</span>
                                         </div>
                                     </div>

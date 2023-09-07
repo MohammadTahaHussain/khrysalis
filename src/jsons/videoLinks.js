@@ -156,7 +156,7 @@ const sportsLinks = [
     },
 ]
 
-const clipLinks = [
+const blipLinks = [
     {
         img: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmlnaHRpbmclMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
         title: 'Sweet love 1',
@@ -197,4 +197,4 @@ const clipLinks = [
 ]
 
 
-export {recommendedLinks, gamingLinks, musicLinks, sportsLinks, clipLinks}
+export {recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks}

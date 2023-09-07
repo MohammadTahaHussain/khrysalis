@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import { Link } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react'
-import BlitsLogo from '../images/BLITS_LOGO-01.png'
+import BlitsLogo from '../images/BLITS_LOGO.png'
 import { useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
 import Slider from '../components/slider'
@@ -36,9 +36,9 @@ function HomePage() {
                         </div>
                         <div className='w-[85%] '>
                             <div className='flex justify-center items-center py-2'>
-                                <img src={BlitsLogo} className='h-[35px]' alt="" />
+                                <img src={BlitsLogo} className='h-[67px]' alt="" />
                             </div>
-                            <div className={`mb-3 category-links-slider w-[98%] m-auto`}>
+                            <div className={`mb-3 -mt-3 category-links-slider w-[98%] m-auto`}>
                                 <div className='flex overflow-x-scroll gap-x-2 py-2'>
                                     <span className="rounded-lg text-sm bg-gray-400 px-1">
                                         Travel

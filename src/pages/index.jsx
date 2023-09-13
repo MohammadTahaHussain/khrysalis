@@ -296,7 +296,7 @@ function HomePage() {
                 </div>
             </div>
             {/* Footer  */}
-            <div className='bg-[#474747] z-50 relative top-10 border-t-2 border-white'>
+            <div className='bg-[#474747] z-50 relative top-10'>
                 <footer class="text-white body-font m-auto">
                     <div class="container px-5 py-10 mx-auto">
                         <div class="flex flex-wrap md:text-left text-center order-first">

@@ -7,7 +7,7 @@ import BlitsLogo from '../images/BLITS_LOGO.png'
 import { useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
 import Slider from '../components/slider'
-import { recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks } from '../jsons/videoLinks'
+import { recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks, musicLinks1, sportsLinks1 } from '../jsons/videoLinks'
 import { AiFillYoutube, AiFillLinkedin } from 'react-icons/ai'
 import { FaPinterest } from 'react-icons/fa'
 import { BsFacebook } from 'react-icons/bs'
@@ -15,12 +15,12 @@ import LiveSlider from '../components/livesSlider'
 import logoIcon from '../images/logoIcon.png'
 import logoText from "../images/logoText.png"
 import Dashboard from '../components/dashboard'
-import bannerImg from '../images/Mask Group 2.png'
+import ganininig from '../images/Mask Group 2.png'
 import clip from '../images/Clip.png'
 import clip1 from '../images/Clip1.png'
 import clip2 from '../images/Clip2.png'
 import clip15 from '../images/Clip15.png'
-
+import baronImg from '../images/Image 1.png'
 
 function HomePage() {
     return (
@@ -226,7 +226,7 @@ function HomePage() {
                                 </div>
 
                                 <div className='w-full h-[324px] mt-5'>
-                                    <img src={bannerImg} alt="" className='h-full w-full rounded-lg' />
+                                    <img src={baronImg} alt="" className='h-full w-full rounded-lg' />
                                 </div>
 
                                 <div className='text-white mt-5'>
@@ -265,20 +265,9 @@ function HomePage() {
                                 </div>
 
                                 <div className='w-full h-[324px] mt-5'>
-                                    <img src={bannerImg} alt="" className='h-full w-full rounded-lg' />
+                                    <img src={ganininig} alt="" className='h-full w-full rounded-lg' />
                                 </div>
 
-                                <div className='text-white mt-5 '>
-                                    <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
-                                        Gaming
-                                    </h1>
-                                    <hr className='z-0 border-gray-600' />
-
-                                    <div>
-                                        <Slider data={gamingLinks} />
-                                    </div>
-
-                                </div>
 
                                 <div className='text-white mt-5'>
                                     <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
@@ -287,9 +276,22 @@ function HomePage() {
                                     <hr className='z-0 border-gray-600' />
 
                                     <div>
-                                        <Slider data={musicLinks} />
+                                        <Slider data={musicLinks1} />
                                     </div>
                                 </div>
+
+                                <div className='text-white mt-5 '>
+                                    <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10">
+                                        Sports
+                                    </h1>
+                                    <hr className='z-0 border-gray-600' />
+
+                                    <div>
+                                        <Slider data={sportsLinks1} />
+                                    </div>
+
+                                </div>
+                                
                             </div>
                         </div>
                     </div>

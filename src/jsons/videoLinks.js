@@ -112,6 +112,40 @@ const musicLinks = [
 
     }
 ]
+
+const musicLinks1 = [
+    {
+        img: clip8,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    },
+    {
+        img: clip12,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }, {
+        img: clip14,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }, {
+        img: clip15,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }
+]
+
 const sportsLinks = [
     {
         img: clip16,
@@ -137,6 +171,38 @@ const sportsLinks = [
 
     }, {
         img: clip19,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }
+]
+const sportsLinks1 = [
+    {
+        img: clip13,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    },
+    {
+        img: clip9,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }, {
+        img: clip10,
+        title: 'Sweet love 1',
+        userName: 'Taha hussain',
+        timeAgo: '12 days ago',
+        link: 'https://www.google.com'
+
+    }, {
+        img: clip11,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -186,4 +252,4 @@ const blipLinks = [
 ]
 
 
-export {recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks}
+export {recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks, musicLinks1, sportsLinks1}

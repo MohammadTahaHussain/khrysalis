@@ -5,6 +5,7 @@ import { PiSpeakerLowBold } from 'react-icons/pi'
 import { BsFillPlayFill } from 'react-icons/bs'
 import { AiOutlineSetting } from 'react-icons/ai'
 import { BiFullscreen } from 'react-icons/bi';
+import Clip6 from '../images/Clip6-1.png'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -38,7 +39,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -83,7 +84,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -128,7 +129,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -173,7 +174,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -218,7 +219,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -263,7 +264,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -308,7 +309,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMfE_UVJdWcDlCKAnZ4v0P0RV_rlZjXJuOQ&usqp=CAU" className='w-full h-full' alt="" />
+                            <img src={Clip6} className='w-full h-full' alt="" />
                             <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
@@ -350,6 +351,8 @@ export default function App() {
                         </div>
                     </div>
                 </SwiperSlide>
+
+
             </Swiper>
         </>
     );

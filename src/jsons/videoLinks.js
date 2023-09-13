@@ -1,6 +1,23 @@
+import clip8 from '../images/Clip8.png'
+import clip9 from '../images/Clip9.png'
+import clip10 from '../images/Clip10.png'
+import clip11 from '../images/Clip11.png'
+import clip12 from '../images/Clip12.png'
+import clip13 from '../images/Clip13.png'
+import clip14 from '../images/Clip14.png'
+import clip15 from '../images/Clip15.png'
+import clip16 from '../images/Clip16.png'
+import clip17 from '../images/Clip17.png'
+import clip18 from '../images/Clip18.png'
+import clip19 from '../images/Clip19.png'
+import clip20 from '../images/Clip20.png'
+import clip21 from '../images/Clip21.png'
+import clip22 from '../images/Clip22.png'
+import clip23 from '../images/Clip23.png'
+
 const recommendedLinks = [
     {
-        img: 'https://images.unsplash.com/photo-1567606404839-dea8cec4d278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW91dHViZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        img: clip8,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -8,39 +25,32 @@ const recommendedLinks = [
 
     },
     {
-        img: 'https://images.unsplash.com/photo-1567606404839-dea8cec4d278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW91dHViZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        img: clip9,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://images.unsplash.com/photo-1567606404839-dea8cec4d278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW91dHViZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        img: clip10,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://images.unsplash.com/photo-1567606404839-dea8cec4d278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW91dHViZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        img: clip11,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
-    }, {
-        img: 'https://images.unsplash.com/photo-1567606404839-dea8cec4d278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW91dHViZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-        title: 'Sweet love 1',
-        userName: 'Taha hussain',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    },
+    }
 ]
 
 const gamingLinks = [
     {
-        img: 'https://wallpapercave.com/dwp1x/wp11559101.jpg',
+        img: clip12,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -48,38 +58,31 @@ const gamingLinks = [
 
     },
     {
-        img: 'https://wallpapercave.com/dwp1x/wp11559101.jpg',
+        img: clip13,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://wallpapercave.com/dwp1x/wp11559101.jpg',
+        img: clip14,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://wallpapercave.com/dwp1x/wp11559101.jpg',
+        img: clip15,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
-    }, {
-        img: 'https://wallpapercave.com/dwp1x/wp11559101.jpg',
-        title: 'Sweet love 1',
-        userName: 'Taha hussain',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    },
+    }
 ]
 const musicLinks = [
     {
-        img: 'https://wallpapercave.com/uwp/uwp3716120.jpeg',
+        img: clip8,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -87,38 +90,31 @@ const musicLinks = [
 
     },
     {
-        img: 'https://wallpapercave.com/uwp/uwp3716120.jpeg',
+        img: clip15,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://wallpapercave.com/uwp/uwp3716120.jpeg',
+        img: clip13,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://wallpapercave.com/uwp/uwp3716120.jpeg',
+        img: clip10,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
-    }, {
-        img: 'https://wallpapercave.com/uwp/uwp3716120.jpeg',
-        title: 'Sweet love 1',
-        userName: 'Taha hussain',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    },
+    }
 ]
 const sportsLinks = [
     {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip16,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -126,39 +122,32 @@ const sportsLinks = [
 
     },
     {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip17,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip18,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip19,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
-    }, {
-        img: 'https://i.gifer.com/9ztf.gif',
-        title: 'Sweet love 1',
-        userName: 'Taha hussain',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    },
+    }
 ]
 
 const blipLinks = [
     {
-        img: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmlnaHRpbmclMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+        img: clip20,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
@@ -166,28 +155,28 @@ const blipLinks = [
 
     },
     {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip21,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
         
     }, {
-        img: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmlnaHRpbmclMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+        img: clip22,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmlnaHRpbmclMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+        img: clip23,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',
         link: 'https://www.google.com'
 
     }, {
-        img: 'https://i.gifer.com/9ztf.gif',
+        img: clip20,
         title: 'Sweet love 1',
         userName: 'Taha hussain',
         timeAgo: '12 days ago',

@@ -15,7 +15,12 @@ import LiveSlider from '../components/livesSlider'
 import logoIcon from '../images/logoIcon.png'
 import logoText from "../images/logoText.png"
 import Dashboard from '../components/dashboard'
-import bannerImg from '../images/Image 1.png'
+import bannerImg from '../images/Mask Group 2.png'
+import clip from '../images/Clip.png'
+import clip1 from '../images/Clip1.png'
+import clip2 from '../images/Clip2.png'
+import clip15 from '../images/Clip15.png'
+
 
 function HomePage() {
     return (
@@ -27,7 +32,7 @@ function HomePage() {
                 <div className="m-auto">
                     <div className="flex justify-between w-full">
                         <div className='w-[15%] h-fit z-10'>
-                            <div className='fixed w-[200px] bg-[#474747] top-10'>
+                            <div className='fixed w-[200px] bg-[#1b1b1b] top-10'>
                                 <div className='w-full flex justify-center items-center py-2'>
                                     <FaBars className='text-white' />
                                 </div>
@@ -120,14 +125,14 @@ function HomePage() {
                             <div className='px-4 pb-10'>
                                 <div className="flex max-h-[333px]">
                                     <div className='w-[55%] relative'>
-                                        <img src="https://images6.alphacoders.com/132/thumbbig-1326038.webp" className='h-full w-full' alt="" />
+                                        <img src={clip} className='h-full w-full' alt="" />
                                         <span className='absolute text-white right-2 top-2 bg-gray-600 px-2 rounded-xl text-sm'>
                                             00:07
                                         </span>
                                     </div>
                                     <div className='w-[45%]'>
                                         <div className='h-1/2 relative'>
-                                            <img src={"https://c4.wallpaperflare.com/wallpaper/966/804/951/epic-games-fortnite-2019-season-x-hd-wallpaper-preview.jpg"} alt="" className='h-full w-full' />
+                                            <img src={clip1} alt="" className='h-full w-full' />
                                             <span className='absolute text-white right-2 top-2 bg-gray-600 px-2 rounded-xl text-sm'>
                                                 00:07
                                             </span>
@@ -146,7 +151,7 @@ function HomePage() {
                                         </div>
                                         <div className='h-1/2 flex'>
                                             <div className='w-1/2 relative'>
-                                                <img src="https://c4.wallpaperflare.com/wallpaper/443/826/368/screenshot-4k-fortnite-wallpaper-preview.jpg" className='h-full w-full' alt="" />
+                                                <img src={clip2} className='h-full w-full' alt="" />
                                                 <span className='absolute text-white right-2 top-2 bg-gray-600 px-2 rounded-xl text-sm'>
                                                     00:07
                                                 </span>
@@ -164,7 +169,7 @@ function HomePage() {
                                                 </div>
                                             </div>
                                             <div className='w-1/2 relative'>
-                                                <img src="https://c4.wallpaperflare.com/wallpaper/646/747/577/video-game-fortnite-chest-fortnite-battle-royale-hd-wallpaper-preview.jpg" className='h-full w-full' alt="" />
+                                                <img src={clip15} className='h-full w-full' alt="" />
                                                 <span className='absolute text-white right-2 top-2 bg-gray-600 px-2 rounded-xl text-sm'>
                                                     00:07
                                                 </span>

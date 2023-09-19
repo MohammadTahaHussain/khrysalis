@@ -6,10 +6,10 @@ import { MdOutlineDarkMode } from "react-icons/md"
 const Navbar = () => {
     return (
         <div className="flex justify-between items-center p-1 m-auto bg-transparent w-full">
-            <div className="text-white"><img src={Logo} alt="" className="w-36 h-8"/></div>
+            <div className="text-white"><img src={Logo} alt="" className="w-36 h-8" /></div>
             <div className="bg-transparent">
                 <div className="border border-gray-400 flex rounded-full bg-transparent z-50">
-                    <select name="" id="" className="text-sm text-opacity-80 uppercase px-1 text-teal-400 bg-transparent border-r border-gray-400 focus-visible:outline-none">
+                    <select name="" id="" className="text-sm text-opacity-80 uppercase px-4 text-teal-400 bg-transparent border-r border-gray-400 focus-visible:outline-none">
                         <option value="" selected>All</option>
                     </select>
                     <div className="bg-transparent">
@@ -20,12 +20,12 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex items-center gap-x-1"> 
+            <div className="flex items-center gap-x-1">
                 <button className="flex px-2 bg-violet-700 text-white items-center gap-x-1 rounded-full">
-                    <BiSolidUserCircle/>
+                    <BiSolidUserCircle />
                     Sign In
                 </button>
-                <MdOutlineDarkMode className="text-white text-[20px]"/>
+                <MdOutlineDarkMode className="text-white text-[20px]" />
             </div>
         </div>
     )

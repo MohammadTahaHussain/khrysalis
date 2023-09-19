@@ -21,18 +21,19 @@ import clip1 from '../images/Clip1.png'
 import clip2 from '../images/Clip2.png'
 import clip15 from '../images/Clip15.png'
 import baronImg from '../images/Image 1.png'
+import categories from '../jsons/categories'
 
 function HomePage() {
     return (
         <>
-            <div className="bg-[#474747] border-b border-gray-500 fixed w-full z-50">
+            <div className="bg-[#565656] border-b border-gray-500 fixed w-full z-50">
                 <Navbar />
             </div>
             <div className="bg-black relative top-10">
                 <div className="m-auto">
                     <div className="flex justify-between w-full">
                         <div className='w-[15%] h-fit z-10'>
-                            <div className='fixed w-[200px] bg-[#1b1b1b] top-10'>
+                            <div className='fixed w-[200px] bg-[#565656] top-10'>
                                 <div className='w-full flex justify-center items-center py-2'>
                                     <FaBars className='text-white' />
                                 </div>
@@ -44,82 +45,20 @@ function HomePage() {
                                 <img src={BlitsLogo} className='h-[67px]' alt="" />
                             </div>
                             <div className={`mb-3 -mt-3 category-links-slider w-[98%] m-auto`}>
-                                <div className='flex overflow-x-scroll gap-x-2 py-2'>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
-                                    <span className="rounded-lg text-sm bg-gray-400 px-1">
-                                        Travel
-                                    </span>
+                                <div className='flex overflow-x-scroll gap-x-3 py-2'>
+                                    {
+                                        categories?.map((value, index) => {
+                                            return (
+                                                <div key={index} className='bg-[#565656] px-2 py-1 rounded-lg'>
+                                                    <span className="text-transparent text-sm font-extrabold bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]">
+                                                        {
+                                                            value
+                                                        }
+                                                    </span>
+                                                </div>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                             <div className='px-4 pb-10'>
@@ -291,7 +230,7 @@ function HomePage() {
                                     </div>
 
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

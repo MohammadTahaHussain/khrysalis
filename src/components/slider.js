@@ -39,20 +39,22 @@ export default function Slider(props) {
                             <SwiperSlide className='!bg-transparent' key={index}>
                                 <a href={val?.link} className='flex flex-col gap-y-1'>
                                     <div>
-                                        <img src={val?.img} className={` ${props.blips ? "!w-[300px] !h-[450px]" : "!w-[300px] !h-[190px]"} !w-[332px] !h-[190px] rounded-lg`} alt="" />
+                                        <img src={val?.img} className={` ${props.blips ? "!w-[270px] !h-[450px]" : "!w-[300px] !h-[190px]"} !w-[332px] !h-[190px] rounded-lg`} alt="" />
                                     </div>
-                                    <div className='flex flex-col gap-y-[2px]'>
+                                    <div className='flex flex-col gap-y-2'>
                                         <div className="flex items-center gap-x-2">
                                             <img src={userIcon} alt="" className='' style={{ width: "20px", height: "20px" }} />
                                             <span className='text-sm font-semibold'>{val?.title}</span>
                                         </div>
-                                        <div className='flex items-center text-sm ml-6'>
-                                            <HiOutlineUser />
-                                            <span className='text-xs'>{val?.userName}</span>
-                                        </div>
-                                        <div className='flex items-center text-sm ml-6 gap-x-1'>
-                                            <img src={calenderImg} className='!h-3 !w-3'/>
-                                            <span className='text-xs'>{val?.timeAgo}</span>
+                                        <div className='flex flex-col gap-y-1'>
+                                            <div className='flex items-center text-sm ml-6'>
+                                                <HiOutlineUser />
+                                                <span className='text-xs'>{val?.userName}</span>
+                                            </div>
+                                            <div className='flex items-center text-sm ml-6 gap-x-1'>
+                                                <img src={calenderImg} className='!h-3 !w-3' />
+                                                <span className='text-xs'>{val?.timeAgo}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>

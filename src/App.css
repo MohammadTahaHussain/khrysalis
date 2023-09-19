@@ -37,7 +37,7 @@
 }
 
 .category-links-slider ::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: #565656;
   border-radius: 10px;
 }
 

@@ -25,7 +25,7 @@ export default function Slider(props) {
     return (
         <>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={props?.blips ? 4 : 3}
                 spaceBetween={30}
                 // pagination={{
                 //     clickable: true,
